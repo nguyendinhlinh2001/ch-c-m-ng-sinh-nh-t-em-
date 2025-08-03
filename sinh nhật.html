@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chúc Mừng Sinh Nhật!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top, #ffecd2, #fcb69f);
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 50px;
+      color: #ff4081;
+      margin-top: 40px;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff4081; }
+      to { text-shadow: 0 0 30px #ff4081; }
+    }
+
+    .wish {
+      font-size: 22px;
+      color: #333;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 700px;
+      line-height: 1.6;
+      background: rgba(255,255,255,0.8);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .cake {
+      width: 200px;
+      margin: 20px auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 18px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e91e63;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 40px;
+      height: 60px;
+      background-color: #ff4081;
+      border-radius: 50%;
+      animation: floatUp 6s infinite ease-in-out;
+      opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-100vh); }
+    }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 36px; }
+      .wish { font-size: 18px; }
+      .btn { font-size: 16px; padding: 10px 20px; }
+      .cake { width: 150px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Chúc Mừng Sinh Nhật! 🎂</h1>
+
+  <img class="cake" src="https://i.imgur.com/jgYjyUS.png" alt="Bánh sinh nhật">
+
+  <div class="wish">
+    Chúc bạn có một sinh nhật thật đáng nhớ, hạnh phúc ngập tràn, sức khỏe dồi dào,kiếm thật nhiều tiền luôn xinh đẹp vàv tươi cười và mọi điều ước đều thành hiện thực! 🥳🎁💖
+  </div>
+
+  <!-- Nhúng bài Text 07 từ YouTube -->
+  <iframe width="100%" height="120" style="margin-top: 20px; border-radius: 15px;"
+    src="https://www.youtube.com/embed/OA8s2Gr3KEE?autoplay=1&loop=1&playlist=OA8s2Gr3KEE"
+    title="Text 07 - W/n"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+
+  <button class="btn" onclick="sendWishes()">🎈 Gửi Lời Chúc</button>
+
+  <script>
+    function createBalloon() {
+      const balloon = document.createElement('div');
+      balloon.classList.add('balloon');
+      balloon.style.left = Math.random() * 100 + 'vw';
+      balloon.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
+      balloon.style.animationDuration = (Math.random() * 5 + 4) + 's';
+      document.body.appendChild(balloon);
+
+      setTimeout(() => {
+        balloon.remove();
+      }, 10000);
+    }
+
+    setInterval(createBalloon, 300);
+
+    function sendWishes() {
+      alert("🎉 Lời chúc đã được gửi đi với tất cả yêu thương! 💌");
+    }
+  </script>
+<p style="font-size:14px; color:#888; margin-top:10px;">
+  🔊 Nếu bạn dùng Safari hoặc iPhone, vui lòng nhấn Play để nghe nhạc nhé!
+</p>
+
+</body>
+</html>
